@@ -65,3 +65,18 @@
   font-weight: bold;
   margin-top: 40px;
 }
+.button {
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #4caf50;
+  color: #fff;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #3e8e41;
+}
