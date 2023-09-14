@@ -26,7 +26,7 @@ export default function Home() {
     console.log(ingredientsString);
     // to use text-davinci-003 model use route /api/generate
     try {
-      const response = await fetch("/api/generate", {
+      const response = await fetch("/api/chatgpt", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

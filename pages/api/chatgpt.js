@@ -1,9 +1,17 @@
+import { ChatGPTAPI } from 'chatgpt'
+
+const configuration = new ChatGPTAPI({
+    apiKey: process.env.OPENAI_API_KEY,
+    completionParams: {
+      model: 'gpt-4',
+      temperature: 0.5,
+      top_p: 0.8
+    }
+  })
+
+const chatgpt = new ChatGPTAPI(configuration);
 
 export default async function (req, res) {
-    const { messages } = generatePrompt(req.body.things)
-    const apiKey = process.env.OPENAI_API_KEY
-    const url = 'https://api.openai.com/v1/chat/completions'
-  
     if (!configuration.apiKey) {
         res.status(500).json({
           error: {
@@ -23,27 +31,25 @@ export default async function (req, res) {
         return;
       }
       
-    const body = JSON.stringify({
-      messages,
-      model: 'gpt-3.5-turbo',
-      stream: false
-    })
-  
-    try {
-      const response = await fetch(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${apiKey}`
-        },
-        body
-      })
-      const data = await response.json()
-      res.status(200).json({ data })
-    } catch (error) {
-      res.status(500).json({ error: error.message })
+      try {
+        const completion = await chatgpt.sendMessage(generatePrompt(things));
+        console.log(completion);
+        res.status(200).json({ result: completion.text });
+      } catch(error) {
+        // Consider adjusting the error handling logic for your use case
+        if (error.response) {
+          console.error(error.response.status, error.response.data);
+          res.status(error.response.status).json(error.response.data);
+        } else {
+          console.error(`Error with OpenAI API request: ${error.message}`);
+          res.status(500).json({
+            error: {
+              message: 'An error occurred during your request.',
+            }
+          });
+        }
+      }
     }
-}
 
 function generatePrompt(things) {
     return `Suggest a recipe using only ${things} n the following format:Name of the recipe,Ingredients, Time to prepare,Steps`;
