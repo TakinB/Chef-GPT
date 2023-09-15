@@ -76,15 +76,15 @@ export default function Home() {
   }
 
   return (
-    <div>
+    <div >
       <Head>
-        <title>OpenAI Quickstart</title>
-        <link rel="icon" href="/robot.png" />
+        <title>Chef GPT</title>
+        <link rel="icon" href="/robot.svg" />
       </Head>
-      {/* <IngredientInput/> */}
       <main className={styles.main}>
-        <img src="/robot.png" className={styles.icon} />
-        <h3>What should I cook?</h3>
+        <div className={styles.background}>
+        <img src="/robot.svg" className={styles.image}/>
+        <h3>What can I cook?</h3>
         <form onSubmit={onSubmit}>
           <div className="ingredients">
           <input
@@ -112,6 +112,8 @@ export default function Home() {
             Add
           </button> */}
         <div >{renderRecipe()}</div>
+        </div>
+
       </main>
     </div>
   );
