@@ -25,7 +25,6 @@ It will also create an image of what it may look like! (upcoming feature)
 
 5. Make a file called .env
 
-env.example .env
    ```
 6. Add your [API key](https://platform.openai.com/account/api-keys) to the newly created `.env` file
 OPENAI_API_KEY="YOUR KEY HERE"
