@@ -33,7 +33,13 @@ export default function Home() {
           {Object.entries(resultObj).map(([key, value]) => (
             <li key={key}>
               <span style={{ fontWeight: "bold" }}>{key}: </span>
-              <span style={{ fontStyle: "italic" }}>{value}</span>
+              {key === "Ingredients" ? (
+                  <span style={{ fontStyle: "italic" }}>
+                    {value.join(", ")}
+                  </span>
+                ) : (
+                  <span>{value}</span>
+                )}
             </li>
           ))}
         </ul>
