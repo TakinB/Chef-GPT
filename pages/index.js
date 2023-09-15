@@ -100,7 +100,7 @@ export default function Home() {
             </button>
           </div>
           {ingredients && <p className={styles.text}>You have added:</p>}
-          <ul className={styles.list}>
+          <ul className={styles.text}>
             {ingredients.map((ingredients, index) => (
             <li key={index}>{ingredients}</li>
           ))}
@@ -111,7 +111,7 @@ export default function Home() {
         {/* <button className={styles.button} onClick={handleAddIngredient}>
             Add
           </button> */}
-        <div >{renderRecipe()}</div>
+        <div className={styles.text}>{renderRecipe()}</div>
         </div>
 
       </main>

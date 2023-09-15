@@ -17,7 +17,7 @@
 .main input {
   font-size: 16px;
   line-height: 24px;
-  color: #353740;
+  color: #21013a;
   font-family: "ColfaxAI", Helvetica, sans-serif;
 }
 .main {
@@ -38,7 +38,7 @@
   font-size: 32px;
   line-height: 40px;
   font-weight: bold;
-  color: #1b022f;
+  color: #21013a;
   margin: 16px 0 40px;
 }
 .main input[type="submit"]:hover{
@@ -58,7 +58,7 @@
   outline-color: #9AFAFA;
 }
 .text{
-  color: #440773;
+  color: #21013a;
   opacity: 1;
 }
 .main input[type="submit"] {
@@ -75,6 +75,8 @@
 
 .main input[type="submit"]:hover{
   background-color: #9617f7;
+  color: #b98eda;
+  
 }
 .main .result {
   font-weight: bold;
@@ -95,6 +97,7 @@
 
 .button:hover {
   background-color: #9617f7;
+  color: #b98eda;
 }
 
 .background {
