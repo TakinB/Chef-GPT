@@ -25,6 +25,23 @@ export default function Home() {
     }
   };
   
+  const renderRecipe = () => {
+    if (result) {
+      const resultObj = JSON.parse(result);
+      return (
+        <ul>
+          {Object.entries(resultObj).map(([key, value]) => (
+            <li key={key}>
+              <span style={{ fontWeight: "bold" }}>{key}: </span>
+              <span style={{ fontStyle: "italic" }}>{value}</span>
+            </li>
+          ))}
+        </ul>
+      );
+    }
+    return null;
+  };
+
   async function onSubmit(event) {
     event.preventDefault();
     console.log(ingredientsString);
@@ -88,7 +105,7 @@ export default function Home() {
         {/* <button className={styles.button} onClick={handleAddIngredient}>
             Add
           </button> */}
-        <div className={styles.result}>{result}</div>
+        <div >{renderRecipe()}</div>
       </main>
     </div>
   );

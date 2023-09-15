@@ -50,5 +50,5 @@ export default async function (req, res) {
 }
 
 function generatePrompt(things) {
-  return `Suggest a recipe using only ${things} n the following format:Name of the recipe,Ingredients, Time to prepare,Steps`;
+  return `Suggest a recipe using only ${things} in json format with the following keys:Name of the recipe,Ingredients, Time to prepare,Steps. Only return the json`;
 }
