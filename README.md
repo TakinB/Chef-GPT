@@ -23,17 +23,12 @@ It will also create an image of what it may look like! (upcoming feature)
    $ npm install
    ```
 
-5. Make a copy of the example environment variables file
+5. Make a file called .env
 
-   On Linux systems: 
-   ```bash
-   $ cp .env.example .env
-   ```
-   On Windows:
-   ```powershell
-   $ copy .env.example .env
+env.example .env
    ```
 6. Add your [API key](https://platform.openai.com/account/api-keys) to the newly created `.env` file
+OPENAI_API_KEY="YOUR KEY HERE"
 
 7. Run the app
 
