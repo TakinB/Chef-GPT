@@ -19,7 +19,11 @@ export default function Home() {
     }
   };
 
-
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      handleAddIngredient();
+    }
+  };
   
   async function onSubmit(event) {
     event.preventDefault();
@@ -52,27 +56,39 @@ export default function Home() {
     <div>
       <Head>
         <title>OpenAI Quickstart</title>
-        <link rel="icon" href="/dog.png" />
+        <link rel="icon" href="/robot.png" />
       </Head>
       {/* <IngredientInput/> */}
       <main className={styles.main}>
-        <img src="/dog.png" className={styles.icon} />
+        <img src="/robot.png" className={styles.icon} />
         <h3>What should I cook?</h3>
         <form onSubmit={onSubmit}>
+          <div className="ingredients">
           <input
-            type="text"
-            name="ingredient"
-            placeholder="Enter ingredients"
-            value={ingredientInput}
-            onChange={(e) => setIngredientInput(e.target.value)}
-          />
+              type="text"
+              name="ingredient"
+              placeholder="Enter ingredients"
+              value={ingredientInput}
+              onKeyPress={handleKeyPress}
+              onChange={(e) => setIngredientInput(e.target.value)}
+            />
+            <button className={styles.button} onClick={handleAddIngredient}>
+              Add
+            </button>
+          </div>
+          {ingredients && <p>You have added:</p>}
+          <ul className={styles.list}>
+            {ingredients.map((ingredients, index) => (
+            <li key={index}>{ingredients}</li>
+          ))}
+          </ul>
           <input type="submit" value="Generate recipe" />
         </form>
-        <button className={styles.button} onClick={handleAddIngredient}>
+      
+        {/* <button className={styles.button} onClick={handleAddIngredient}>
             Add
-          </button>
-        {/* <div className={styles.result}>{result}</div> */}
-        {result && <p>{result}</p>}
+          </button> */}
+        <div className={styles.result}>{result}</div>
       </main>
     </div>
   );
