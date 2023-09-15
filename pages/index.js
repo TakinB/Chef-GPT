@@ -84,7 +84,7 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.background}>
         <img src="/robot.svg" className={styles.image}/>
-        <h3>What can I cook?</h3>
+        <h3 className={styles.text}>What can I cook?</h3>
         <form onSubmit={onSubmit}>
           <div className="ingredients">
           <input
@@ -99,7 +99,7 @@ export default function Home() {
               Add
             </button>
           </div>
-          {ingredients && <p>You have added:</p>}
+          {ingredients && <p className={styles.text}>You have added:</p>}
           <ul className={styles.list}>
             {ingredients.map((ingredients, index) => (
             <li key={index}>{ingredients}</li>

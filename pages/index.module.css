@@ -38,8 +38,11 @@
   font-size: 32px;
   line-height: 40px;
   font-weight: bold;
-  color: #202123;
+  color: #1b022f;
   margin: 16px 0 40px;
+}
+.main input[type="submit"]:hover{
+  background-color: #9617f7;
 }
 .main form {
   display: flex;
@@ -54,8 +57,8 @@
   margin-bottom: 24px;
   outline-color: #9AFAFA;
 }
-.main ::placeholder {
-  color: #8e8ea0;
+.text{
+  color: #440773;
   opacity: 1;
 }
 .main input[type="submit"] {
@@ -96,7 +99,7 @@
 
 .background {
   background: linear-gradient(90deg, #9AFAFA, #9617f7);
-  height: 100vh;
+  height: 300vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
