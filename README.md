@@ -1,4 +1,4 @@
-# What should I cook tonight?
+# What can I cook?
 
 You have a few ingridients, you want to cook, and you don't want to make a shopping trip. Ask chat GPT to create a recipe based on the ingridients you have at home.
 
