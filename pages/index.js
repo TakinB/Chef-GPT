@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { useState } from "react";
 import styles from "./index.module.css";
+
 // import IngredientInput from "./components/IngredientInput";
 
 

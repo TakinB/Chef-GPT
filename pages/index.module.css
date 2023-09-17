@@ -16,8 +16,8 @@
 .main,
 .main input {
   font-size: 16px;
-  line-height: 24px;
-  color: #21013a;
+  line-height: 18px;
+  color: #474547;
   font-family: "ColfaxAI", Helvetica, sans-serif;
 }
 .main {
@@ -31,51 +31,58 @@
 }
 
 .main .image {
-  width: 300px;
+  width: 200px;
 }
 
 .main h3 {
   font-size: 32px;
   line-height: 40px;
   font-weight: bold;
-  color: #21013a;
+  color: #474547;
   margin: 16px 0 40px;
 }
 .main input[type="submit"]:hover{
-  background-color: #9617f7;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
 }
 .main form {
   display: flex;
   flex-direction: column;
-  width: 320px;
 }
 .main input[type="text"] {
   padding: 12px 16px;
-  padding-right: 60px;
-  border: 1px solid #9AFAFA;
+  padding-right: 10px;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px #bebebe, -10px -10px 20px #ffffff;
+  background-color: #f0f0f0;
   border-radius: 4px;
-  margin-bottom: 24px;
-  outline-color: #9AFAFA;
+  margin-bottom: 14px;
+  
 }
 .text{
-  color: #21013a;
+  color: #474547;
   opacity: 1;
 }
 .main input[type="submit"] {
   font-size: 16px;
   padding: 12px;
-  border-radius: 4px;
   border: none;
-  background-color: #9AFAFA;
-  color: #440773;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px #bebebe, -10px -10px 20px #ffffff;
+  background-color: #f0f0f0;
+
+  color: #474547;
   margin-bottom: 24px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .main input[type="submit"]:hover{
-  background-color: #9617f7;
-  color: #b98eda;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
   
 }
 .main .result {
@@ -84,29 +91,36 @@
 }
 .button {
   font-size: 16px;
-  padding: 16px 16px;
-  border-radius: 4px;
+  /* padding: 160px 206px; */
   border: none;
-  background-color: #9AFAFA;
-  color: #440773;
+  padding-left: 16px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px #bebebe, -10px -10px 20px #ffffff;
+  background-color: #f0f0f0;
   margin-left: 10px;
   margin-bottom: 24px;
   cursor: pointer;
+  color: #474547;
   transition: background-color 0.3s ease;
 }
 
 .button:hover {
-  background-color: #9617f7;
-  color: #b98eda;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
 }
 
 .background {
-  background: linear-gradient(90deg, #9AFAFA, #9617f7);
+  background: linear-gradient(90deg, #e8e8e8, #e8e8e8);
   height: 300vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
 
+}
+.ingredients{
+  /* padding-right: 200px; */
+  /* align-items: center; */
 }
 
